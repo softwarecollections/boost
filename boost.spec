@@ -37,7 +37,7 @@ Name: %{?scl_prefix}boost
 Summary: The free peer-reviewed portable C++ source libraries
 Version: 1.53.0
 %define version_enc 1_53_0
-Release: 19%{?dist}
+Release: 20%{?dist}
 License: Boost and MIT and Python
 
 %define toplev_dirname boost_%{version_enc}
@@ -224,6 +224,7 @@ in future standards.)
 %package atomic
 Summary: Run-Time component of boost atomic library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description atomic
 
@@ -236,6 +237,7 @@ variables.
 Summary: Run-Time component of boost chrono library
 Group: System Environment/Libraries
 Requires: %{?scl_prefix}boost-system = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description chrono
 
@@ -245,6 +247,7 @@ Run-Time support for Boost.Chrono, a set of useful time utilities.
 %package context
 Summary: Run-Time component of boost context switching library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description context
 
@@ -255,6 +258,7 @@ provides a sort of cooperative multitasking on a single thread.
 %package date-time
 Summary: Run-Time component of boost date-time library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description date-time
 
@@ -265,6 +269,7 @@ on generic programming concepts.
 Summary: Run-Time component of boost filesystem library
 Group: System Environment/Libraries
 Requires: %{?scl_prefix}boost-system = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description filesystem
 
@@ -276,6 +281,7 @@ directories.
 Summary: Run-Time component of boost graph library
 Group: System Environment/Libraries
 Requires: %{?scl_prefix}boost-regex = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description graph
 
@@ -286,6 +292,7 @@ Library (STL).
 %package iostreams
 Summary: Run-Time component of boost iostreams library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description iostreams
 
@@ -298,6 +305,7 @@ Group: System Environment/Libraries
 Requires: %{?scl_prefix}boost-chrono = %{version}-%{release}
 Requires: %{?scl_prefix}boost-system = %{version}-%{release}
 Requires: %{?scl_prefix}boost-thread = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description locale
 
@@ -307,6 +315,7 @@ handling tools.
 %package math
 Summary: Math functions for boost TR1 library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description math
 
@@ -316,6 +325,7 @@ portion of Boost.TR1.
 %package program-options
 Summary:  Run-Time component of boost program_options library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description program-options
 
@@ -326,6 +336,7 @@ conventional methods such as command line and configuration file.
 %package python
 Summary: Run-Time component of boost python library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description python
 
@@ -340,6 +351,7 @@ support for Boost Python Library.
 %package python3
 Summary: Run-Time component of boost python library for Python 3
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description python3
 
@@ -354,6 +366,7 @@ Summary: Shared object symbolic links for Boost.Python 3
 Group: System Environment/Libraries
 Requires: %{?scl_prefix}boost-python3 = %{version}-%{release}
 Requires: %{?scl_prefix}boost-devel = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description python3-devel
 
@@ -364,6 +377,7 @@ Shared object symbolic links for Python 3 variant of Boost.Python.
 %package random
 Summary: Run-Time component of boost random library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description random
 
@@ -372,6 +386,7 @@ Run-Time support for boost random library.
 %package regex
 Summary: Run-Time component of boost regular expression library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description regex
 
@@ -380,6 +395,7 @@ Run-Time support for boost regular expression library.
 %package serialization
 Summary: Run-Time component of boost serialization library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description serialization
 
@@ -388,6 +404,7 @@ Run-Time support for serialization for persistence and marshaling.
 %package signals
 Summary: Run-Time component of boost signals and slots library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description signals
 
@@ -396,6 +413,7 @@ Run-Time support for managed signals & slots callback implementation.
 %package system
 Summary: Run-Time component of boost system support library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description system
 
@@ -406,6 +424,7 @@ library.
 %package test
 Summary: Run-Time component of boost test library
 Group: System Environment/Libraries
+%{?scl:Requires:%scl_runtime}
 
 %description test
 
@@ -416,6 +435,7 @@ program execution monitoring.
 Summary: Run-Time component of boost thread library
 Group: System Environment/Libraries
 Requires: %{?scl_prefix}boost-system = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description thread
 
@@ -429,6 +449,7 @@ Summary: Run-Time component of boost timer library
 Group: System Environment/Libraries
 Requires: %{?scl_prefix}boost-chrono = %{version}-%{release}
 Requires: %{?scl_prefix}boost-system = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description timer
 
@@ -444,6 +465,7 @@ Requires: %{?scl_prefix}boost-date-time = %{version}-%{release}
 Requires: %{?scl_prefix}boost-filesystem = %{version}-%{release}
 Requires: %{?scl_prefix}boost-system = %{version}-%{release}
 Requires: %{?scl_prefix}boost-thread = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description wave
 
@@ -456,6 +478,7 @@ Summary: The Boost C++ headers and shared development libraries
 Group: Development/Libraries
 Requires: %{?scl_prefix}boost = %{version}-%{release}
 Provides: %{?scl_prefix}boost-python-devel = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description devel
 Headers and shared object symbolic links for the Boost C++ libraries.
@@ -466,6 +489,7 @@ Group: Development/Libraries
 Requires: %{?scl_prefix}boost-devel = %{version}-%{release}
 Obsoletes: %{?scl_prefix}boost-devel-static < 1.34.1-14
 Provides: %{?scl_prefix}boost-devel-static = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description static
 Static Boost C++ libraries.
@@ -477,6 +501,7 @@ Group: Documentation
 BuildArch: noarch
 %endif
 Provides: %{?scl_prefix}boost-python-docs = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description doc
 This package contains the documentation in the HTML format of the Boost C++
@@ -490,6 +515,7 @@ Group: Documentation
 BuildArch: noarch
 %endif
 Requires: %{?scl_prefix}boost-devel = %{version}-%{release}
+%{?scl:Requires:%scl_runtime}
 
 %description examples
 This package contains example source files distributed with boost.
@@ -609,6 +635,7 @@ Summary: Cross platform build system for C++ projects
 Group: Development/Tools
 Requires: %{?scl_prefix}boost-jam
 BuildArch: noarch
+%{?scl:Requires:%scl_runtime}
 
 %description build
 Boost.Build is an easy way to build C++ projects, everywhere. You name
@@ -621,6 +648,7 @@ C++ compilers -- on Windows, OSX, Linux and commercial UNIX systems.
 %package jam
 Summary: A low-level build tool
 Group: Development/Tools
+%{?scl:Requires:%scl_runtime}
 
 %description jam
 Boost.Jam (BJam) is the low-level build engine tool for Boost.Build.
@@ -1249,6 +1277,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/bjam.1*
 
 %changelog
+* Mon Nov 24 2014 Marek Skalicky <mskalick@redhat.com> - 1.53.0-20
+- Add Requires scl_runtime to proper uninstall 
+
 * Thu Oct 30 2014 Troy Dawson <tdawson@redhat.com> - 1.53.0-19
 - Add support for software collections
 
